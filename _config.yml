@@ -1,0 +1,12 @@
+title: Ashkan Mokarian
+author: ashkan
+
+port: 4000
+#auto: true
+safe: true
+#server: true
+markdown: redcarpet
+#pygments: true
+permalink: /:year/:month/:title
+gems:
+  - jekyll-sitemap

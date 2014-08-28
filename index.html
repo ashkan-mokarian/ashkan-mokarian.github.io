@@ -1,0 +1,72 @@
+---
+layout: default
+---
+<section class="hello">
+	<div class="container clearfix">
+		<div style="float:left;"><img src="/assets/img/avatar2.jpg" height="200px" width="200px" alt="&lt;jm"></div>
+		<div class="brand">
+			<p class="name">Ashkan Mokarian</p>
+			<p style="margin-bottom:0px"><span class="job">M.Sc. Student</span> <span style="font-size:0.8em"> (Since Oct.2013)</span></p>
+			<p style="margin-top:2px;margin-bottom:0px"><a href="http://www.mpi-inf.mpg.de/" style="color: #258;
+  text-decoration: underline;" target="_blank">Max Planck Institut for Informatik</a></p>
+  			<p style="margin-top:0px;margin-bottom:0px"><a href="http://www.cs.uni-saarland.de" style="color: #258;text-decoration: underline;" target="_blank">Saarland University</a></p>
+  			<p class="icon-mail" style="margin-bottom:2px">ashkan[at]mpi-inf.mpg.de</p>
+  			<p style="margin-top:0px;margin-bottom:3px">Research Interests:  Optimization, Machine Learning, (with applications in) Vision</p>
+		</div>
+
+	</div>
+	<div class="container" style="padding-top:0px"> 
+		<div>
+			<h3><span style="border-bottom: solid 4px #92e4c9;">ABOUT</span></h3>
+			<p>
+			I am a master student and scholarship holder in the <a href="http://www.imprs-cs.de/" style="color: #258;text-decoration: underline;" target="_blank">IMPRS-CS</a> graduate program since october 2013.
+			</p>
+		</div>
+	</div>
+</section>
+
+<section class="hello-blog">
+	<div class="container" style="padding-top:10px;">
+		<h3>NEWS</h3>
+		<p>[28.08.2014]: Website deployed.</p>
+		<!-- <div class="card-highlight">
+			<div class="card-highlight-date">
+				<span class="last-post">Last Post</span>
+				<span>{{ site.posts[0].date | date : '%d %b %Y' }}</span>
+			</div>
+			<h3>{{ site.posts[0].title }}</h3>
+			{% if site.posts[0].resume.size > 0 %}
+				<p class="resume">{{ site.posts[0].resume }}</p>
+			{% endif %}
+			<a class="cta-btn" href="{{ site.posts[0].url }}">Go to the post</a>
+		</div> -->
+	</div>
+</section>
+
+<section class="main">
+	{% if site.posts.size > 0 %}
+	<div class="container" >
+		<h3><span style="border-bottom: solid 4px #85d6e4;"><span style="font-size:0.7em">some</span> EXPERIENCEs <span style="font-size:0.7em">(since october 2013)</span></span></h3>
+		{% for post in site.posts %}
+		<div class="post">
+			{{post.excerpt}}
+			{% if post.more == 'yes' %}
+			<a href="{{post.url}}" style="color: #258;text-decoration: underline;">(read more...)</a>
+			{% endif %}
+		</div>
+		{% endfor %}
+	</div>
+	{% endif %}
+	<!-- <div class="container">
+		<h2><span>Stuff on GitHub</span></h2>
+		<p>In my spare time I put on GitHub some solutions I've crafted myself for common problems on front end development. Here are some of them...</p>
+		{% for r in site.data.repositories %}
+			<div class="card-highlight">
+				<h3>{{ r.name }}</h3>
+				<p>{{ r.description}}</p>
+				<a href="https://github.com/jeremenichelli/{{ r.slug }}" class="cta-btn" target="_blank">Go to the repo</a>
+			</div>
+		{% endfor %}
+	</div> -->
+</section>
+	
